@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estiloContacto.css">
+    <title>Pedido de Flor</title>
+</head>
+<body >
+
+    <header>
+        <h1 class="miTitulo">Pedido de Flores</h1>
+    </header>
+
+    <main class="main" >
+
+        <form id="form-validation" method="GET" >
+            <fieldset>
+                <legend>Formulario</legend>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" 
+                     placeholder="Ingrese el nombre" required>
+                     
+                </div>
+                 <br>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido"
+                     placeholder="Ingrese el apellido" required>
+                </div>
+                 <br>
+                <div class="form-group">
+                    <label for="tipoFlor">Tipo de Flor:</label>
+                    <select id="tipoFlor" name="tipoFlor" required>
+                        <option value="rosaRoja">Rosa Roja</option>
+                        <option value="rosaAmarilla">Rosa Amarilla</option>
+                        <option value="rosaRosada">Rosa Rosada</option>
+                    </select>
+                </div class="form-group">
+                 <br>
+                <div >
+                    <label for="descripcion">Descripción del Pedido: <br></label>
+                    <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea>
+                </div>
+                
+                <button type="submit" class="button">Enviar</button>
+
+            </fieldset>
+           
+        </form>
+
+    </main>
+
+    <script>
+        const addForm = document.getElementById
+        ("form-validation");
+        addForm.addEventListener("submit",(e) =>{
+            if(addForm.checkVisibility == false){
+               e.preventDefault();
+               e.stopPropagation();
+               return false
+            }
+        })
+    </script>
+
+    <footer>
+        <a href="index.html">Volver a la pagina anterior</a>
+    </footer>
+   
+</body>
+</html>
